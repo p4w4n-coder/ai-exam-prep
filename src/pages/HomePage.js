@@ -47,7 +47,7 @@ function QuizCard({ quiz, onStart }) {
   );
 }
 
-export default function HomePage({ quizzes, onStart }) {
+export default function HomePage({ quizzes, onStart, onStudy }) {
   const ab731 = quizzes.filter(q => q.exam === "AB-731");
   const cpmai = quizzes.filter(q => q.exam === "CPMAI");
   const totalQ = quizzes.reduce((a, q) => a + q.total, 0);
@@ -64,6 +64,7 @@ export default function HomePage({ quizzes, onStart }) {
           <nav className="header-nav">
             <a href="#ab731">AB-731</a>
             <a href="#cpmai">CPMAI</a>
+            <button className="nav-study-btn" onClick={onStudy}>📖 Study Notes</button>
             <a href="#about">About</a>
           </nav>
         </div>
@@ -105,6 +106,20 @@ export default function HomePage({ quizzes, onStart }) {
           </div>
         </div>
       </section>
+
+      {/* Study Notes Banner */}
+      <div className="container">
+        <div className="study-banner" onClick={onStudy}>
+          <div className="study-banner-left">
+            <span className="study-banner-icon">📖</span>
+            <div>
+              <div className="study-banner-title">New: Study Notes</div>
+              <div className="study-banner-sub">Key concepts, exam traps, and domain summaries for AB-731 and CPMAI</div>
+            </div>
+          </div>
+          <button className="study-banner-btn">Read Notes →</button>
+        </div>
+      </div>
 
       {/* Ad slot — top */}
       <div className="container">

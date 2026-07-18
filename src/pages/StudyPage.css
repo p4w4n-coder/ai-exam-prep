@@ -1,0 +1,271 @@
+.study-page {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 0 1rem 4rem;
+  min-height: 100vh;
+}
+
+/* Study home */
+.study-home { padding-top: 1.5rem; }
+.study-home-title {
+  font-size: clamp(1.6rem, 4vw, 2.2rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  margin: 0.5rem 0 0.5rem;
+}
+.study-home-sub {
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.65;
+  max-width: 600px;
+  margin-bottom: 2rem;
+}
+
+/* Study cards */
+.study-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.25rem;
+  margin-bottom: 2rem;
+}
+.study-card {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  cursor: pointer;
+  transition: border-color 0.15s, transform 0.15s;
+  position: relative;
+}
+.study-card:hover {
+  border-color: var(--exam-color);
+  transform: translateY(-2px);
+}
+.study-card-color-bar {
+  height: 4px;
+  background: var(--exam-color);
+}
+.study-card-content { padding: 1.5rem; }
+.study-card-title {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  line-height: 1.35;
+}
+.study-card-meta {
+  display: flex;
+  gap: 0.5rem;
+  color: var(--muted);
+  font-size: 0.78rem;
+  margin-bottom: 1rem;
+}
+.study-card-traps {
+  background: var(--bg3);
+  border-radius: var(--radius-sm);
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  font-size: 0.8rem;
+  line-height: 1.5;
+}
+.trap-preview-label {
+  display: block;
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--warn);
+  margin-bottom: 0.3rem;
+}
+.trap-preview-text { color: var(--muted); }
+.study-card-btn {
+  background: var(--exam-color);
+  color: #0f172a;
+  font-weight: 700;
+  font-size: 0.85rem;
+  padding: 0.6rem 1.1rem;
+  border-radius: var(--radius-sm);
+  width: 100%;
+  text-align: center;
+  transition: opacity 0.15s;
+}
+.study-card-btn:hover { opacity: 0.88; }
+
+/* Study tip */
+.study-tip {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.25rem;
+}
+.study-tip-icon { font-size: 1.4rem; flex-shrink: 0; }
+.study-tip p { font-size: 0.88rem; color: var(--muted); line-height: 1.65; }
+.study-tip strong { color: var(--text); }
+
+/* Exam notes */
+.exam-notes { padding-top: 1.5rem; }
+.exam-notes-header {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-top: 4px solid var(--exam-color);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  margin: 1rem 0 1.5rem;
+}
+.exam-notes-title {
+  font-size: clamp(1.2rem, 3vw, 1.6rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin-bottom: 1rem;
+}
+.exam-info-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+.exam-info-item { display: flex; flex-direction: column; gap: 0.15rem; }
+.exam-info-label {
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+  text-transform: capitalize;
+}
+.exam-info-val { font-size: 0.9rem; font-weight: 600; color: var(--text); }
+
+/* Traps */
+.traps-section { margin-bottom: 2rem; }
+.traps-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.traps-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 0.75rem;
+}
+.trap-card {
+  background: rgba(251,191,36,0.06);
+  border: 1px solid rgba(251,191,36,0.2);
+  border-radius: var(--radius-sm);
+  padding: 0.9rem 1rem;
+  font-size: 0.84rem;
+  line-height: 1.55;
+  color: var(--text);
+}
+.trap-num {
+  display: block;
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: var(--warn);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.35rem;
+}
+
+/* Section notes */
+.sections-notes { margin-bottom: 2rem; }
+.sections-notes-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 0.4rem;
+}
+.sections-notes-sub {
+  color: var(--muted);
+  font-size: 0.85rem;
+  margin-bottom: 1rem;
+}
+.sections-notes-list { display: flex; flex-direction: column; gap: 0.5rem; }
+
+/* Section note accordion */
+.section-note {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  transition: border-color 0.15s;
+}
+.section-note-open { border-color: var(--exam-color); }
+.section-note-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  width: 100%;
+  padding: 1rem 1.25rem;
+  background: none;
+  color: var(--text);
+  text-align: left;
+  font-size: 0.95rem;
+  font-weight: 600;
+  transition: background 0.12s;
+}
+.section-note-header:hover { background: var(--bg3); }
+.section-note-icon { font-size: 1.2rem; flex-shrink: 0; }
+.section-note-title { flex: 1; }
+.section-note-arrow { color: var(--muted); font-size: 0.7rem; }
+.section-note-body {
+  padding: 0 1.25rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  border-top: 1px solid var(--border);
+  padding-top: 1rem;
+}
+
+/* Key points */
+.key-point {
+  padding: 0.9rem;
+  background: var(--bg3);
+  border-radius: var(--radius-sm);
+  border-left: 3px solid var(--exam-color);
+}
+.key-point-heading {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 0.4rem;
+  letter-spacing: 0.01em;
+}
+.key-point-body {
+  font-size: 0.83rem;
+  color: var(--muted);
+  line-height: 1.65;
+}
+
+/* Study CTA */
+.study-cta {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  text-align: center;
+  margin-top: 1rem;
+}
+.study-cta h3 { font-size: 1rem; font-weight: 700; margin-bottom: 0.4rem; }
+.study-cta p { color: var(--muted); font-size: 0.85rem; }
+
+.exam-badge-study {
+  display: inline-block;
+  color: #fff;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+  margin-bottom: 0.75rem;
+}
+
+@media (max-width: 640px) {
+  .study-page { padding: 0 0.75rem 3rem; }
+  .study-cards { grid-template-columns: 1fr; }
+  .traps-grid { grid-template-columns: 1fr; }
+  .exam-info-grid { gap: 1rem; }
+}
