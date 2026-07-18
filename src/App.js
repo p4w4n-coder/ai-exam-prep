@@ -2,6 +2,7 @@ import { useState } from "react";
 import quizData from "./data/quizData.json";
 import HomePage from "./pages/HomePage";
 import QuizPage from "./pages/QuizPage";
+import StudyPage from "./pages/StudyPage";
 import "./App.css";
 
 export default function App() {
@@ -21,9 +22,18 @@ export default function App() {
     window.scrollTo(0, 0);
   }
 
+  function goStudy() {
+    setPage("study");
+    window.scrollTo(0, 0);
+  }
+
   if (page === "quiz" && activeQuiz) {
     return <QuizPage quiz={activeQuiz} onBack={goHome} />;
   }
 
-  return <HomePage quizzes={quizData} onStart={openQuiz} />;
+  if (page === "study") {
+    return <StudyPage onBack={goHome} />;
+  }
+
+  return <HomePage quizzes={quizData} onStart={openQuiz} onStudy={goStudy} />;
 }
