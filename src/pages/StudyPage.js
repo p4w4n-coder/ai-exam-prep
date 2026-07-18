@@ -2,14 +2,6 @@ import { useState } from "react";
 import STUDY_NOTES from "../data/studyNotes";
 import "./StudyPage.css";
 
-function ExamBadge({ color, label }) {
-  return (
-    <span className="exam-badge-study" style={{ background: color }}>
-      {label}
-    </span>
-  );
-}
-
 function TrapCard({ trap, index }) {
   return (
     <div className="trap-card">
