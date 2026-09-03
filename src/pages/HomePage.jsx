@@ -246,8 +246,7 @@ export default function HomePage({ quizzes = [], onStart, onStudy, onAbout }) {
               <div className="aier-kicker">Built for learning</div>
               <h2>Everything you need to study with intention.</h2>
               <p>
-                Keep the landing page simple; use the deeper pages for detailed
-                material.
+                  Structured lessons, real practice questions and clear explanations.
               </p>
             </div>
 
